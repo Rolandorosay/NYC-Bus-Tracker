@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>hello world!</title>
+		<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+		<link
+			href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
+			rel="stylesheet"
+		/>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			#map {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="map"></div>
+		<div class="map-overlay top">
+			<button style="font-size: 2em" onclick="move()">
+				Show stops between MIT and Harvard
+			</button>
+		</div>
+		<script>
+			//
+			<!--*Create a custom key with a specific title-->
+			<!--!Not a public access token-->
+			//
+			mapboxgl.accessToken =
+				"pk.eyJ1Ijoicm9sYW5kb3Jvc2F5IiwiYSI6ImNrbmd6ZnhweTAwZjUyeHFjYzNlMHQ5cHoifQ.gvilq-dmxOJhQ_QpMgarLA";
+
+			const map = new mapboxgl.Map({
+				container: "map",
+				style: "mapbox://styles/mapbox/satellite-v9",
+				center: [-71.091542, 42.358862],
+				zoom: 16,
+			});
+
+			var marker = new mapboxgl.Marker()
+				.setLngLat([-71.091542, 42.358862])
+				.addTo(map);
+		</script>
+	</body>
+</html>
