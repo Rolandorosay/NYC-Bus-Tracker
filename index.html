@@ -9,23 +9,8 @@
 			href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css"
 			rel="stylesheet"
 		/>
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-			}
-			#map {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				width: 100%;
-			}
-			.map-overlay {
-				position: absolute;
-				left: 0;
-				padding: 10px;
-			}
-		</style>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="map_animation.js"></script>
 	</head>
 	<body>
 		<div id="map"></div>
@@ -33,6 +18,10 @@
 			<button style="font-size: 2em" onclick="move()">
 				Show stops between MIT and Harvard
 			</button>
+			<p>
+				Zoom in and out to view route as well as to view a more detailed
+				view of the city.
+			</p>
 		</div>
 		<script>
 			//

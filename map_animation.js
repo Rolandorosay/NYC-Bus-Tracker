@@ -1,1 +1,1 @@
-var hello = 10
+//* JS was left in HTML because map would not show up when transferred
